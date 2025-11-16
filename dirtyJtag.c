@@ -36,6 +36,7 @@
 #include "pio_jtag.h"
 #include "cdc_uart.h"
 #include "led.h"
+#include "pwm.h"
 #include "bsp/board.h"
 #include "tusb.h"
 #include "cmd.h"
@@ -189,6 +190,7 @@ int main()
     cdc_uart_init( 1, PIN_UART1, PIN_UART1_RX, PIN_UART1_TX );
 #endif
 
+    clk_pwm_init( PIN_PWM, FREQ_PWM );
 
 #ifdef MULTICORE
     multicore_launch_core1(core1_entry);

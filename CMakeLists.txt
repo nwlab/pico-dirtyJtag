@@ -71,6 +71,7 @@ add_executable(dirtyJtag
 		get_serial.c
 		cmd.c
         led.c
+		pwm.c
 )
 
 target_include_directories(dirtyJtag PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
@@ -91,6 +92,7 @@ target_link_libraries(dirtyJtag PRIVATE pico_stdlib)
 target_link_libraries(dirtyJtag PRIVATE
     hardware_pio
 	hardware_dma
+	hardware_pwm
 	pico_unique_id
 	tinyusb_device
 	tinyusb_board

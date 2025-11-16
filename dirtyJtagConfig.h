@@ -62,7 +62,7 @@
 
 #if ( BOARD_TYPE == BOARD_PICO )
 
-#define PIN_TDI 6 
+#define PIN_TDI 6
 #define PIN_TDO 7
 #define PIN_TCK 2
 #define PIN_TMS 3
@@ -74,7 +74,7 @@
 #define PIN_LED_ERROR  19
 #define PIN_LED_RX     20
 
-#define CDC_UART_INTF_COUNT 2
+#define CDC_UART_INTF_COUNT 1
 #define PIN_UART0 uart0
 #define PIN_UART0_TX    0
 #define PIN_UART0_RX    1
@@ -82,9 +82,12 @@
 #define PIN_UART1_TX    4
 #define PIN_UART1_RX    5
 
+#define PIN_PWM         5
+#define FREQ_PWM        5000
+
 #elif ( BOARD_TYPE == BOARD_ADAFRUIT_ITSY )
 
-#define PIN_TDI 28 
+#define PIN_TDI 28
 #define PIN_TDO 27
 #define PIN_TCK 26
 #define PIN_TMS 29
@@ -104,7 +107,7 @@
 
 #elif ( BOARD_TYPE == BOARD_SPOKE_RP2040 )
 
-#define PIN_TDI 23 
+#define PIN_TDI 23
 #define PIN_TDO 20
 #define PIN_TCK 22
 #define PIN_TMS 21
@@ -147,7 +150,7 @@
 // of damage so these pins are not going to be setup
 #define CDC_UART_INTF_COUNT 0
 
-#define PIN_TDI  16 
+#define PIN_TDI  16
 #define PIN_TDO  17
 #define PIN_TCK  18
 #define PIN_TMS  19
